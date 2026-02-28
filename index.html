@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping card-add quantity</title>
+    <title>Shopping Cart - Add Quantity</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
 
+<body class="flex justify-center items-start min-h-screen bg-gray-100">
 
-  <script src="./js/shopping.js"></script>  
+    <div class="w-[420px] bg-white p-8 rounded-2xl shadow-xl space-y-5">
+
+        <input id="product-name" 
+               type="text" 
+               placeholder="Product"
+               class="w-full h-12 px-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <input id="product-quantity" 
+               type="text" 
+               placeholder="Quantity"
+               class="w-full h-12 px-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <button onclick="addproduct()" class="w-full h-12 text-lg bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+            Add Product
+        </button>
+
+    </div>
+
+    <script src="./js/shopping.js"></script>
+
 </body>
 </html>

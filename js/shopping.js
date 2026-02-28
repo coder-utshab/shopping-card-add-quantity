@@ -1,1 +1,13 @@
-console.log("Utshab");
+const addproduct = () => {
+    const productField = document.getElementById('product-name');
+    const quantityField = document.getElementById('product-quantity');
+
+    const product = productField.value;
+    const quantity = quantityField.value;
+
+    // clear korar jonno
+    productField.value = '';
+    quantityField.value = '';
+
+    console.log(product, quantity);
+}
