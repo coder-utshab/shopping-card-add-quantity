@@ -4,7 +4,6 @@ const addproduct = () => {
 
     const product = productField.value;
     const quantity = quantityField.value;
-
     // clear korar jonno
     productField.value = '';
     quantityField.value = '';
@@ -52,12 +51,14 @@ const displayProductsForLocalStorage = () => {
     console.log(saveCart);
     // kono akta object ar property jodii dhora dhora payta chay sa jonno
     for(const product in saveCart){
-        // quantity ka add korta pari quan tity paoa gacha sava cart  thaka karon ata akta object
+        // quantity ka add korta pari 
+        // quantity paoa gacha sava cart thaka karon ata akta object
         const quantity = saveCart[product];
         console.log(product, quantity);
         displayProduct(product, quantity);
     }
 }
 
+// Page load হলেই stored data দেখাবে।
 displayProductsForLocalStorage();
 
