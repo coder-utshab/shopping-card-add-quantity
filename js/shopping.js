@@ -25,7 +25,7 @@ const displayProduct = (product, quantity) => {
     ul.appendChild(li);
 }
 
-// local storage a add korar jonno
+// card tar data gulaka amara kevaba payta parii sayta
 const getStoredShoppingCart = () =>{
     let cart = {};
     const storedCart = localStorage.getItem('cart');
@@ -46,13 +46,16 @@ const saveProductToLocalStorage = (product, quantity) => {
 }
 
 // akhon jahatu data gula roya gacha 
-// abar data gulaka dakanor jonno
+// abar data gulaka 1 -1 ta kora dakanor jonno
 const displayProductsForLocalStorage = () => {
     const saveCart = getStoredShoppingCart();
     console.log(saveCart);
     // kono akta object ar property jodii dhora dhora payta chay sa jonno
     for(const product in saveCart){
-        console.log(product);
+        // quantity ka add korta pari quan tity paoa gacha sava cart  thaka karon ata akta object
+        const quantity = saveCart[product];
+        console.log(product, quantity);
+        displayProduct(product, quantity);
     }
 }
 
