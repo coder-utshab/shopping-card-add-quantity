@@ -59,6 +59,6 @@ const displayProductsForLocalStorage = () => {
     }
 }
 
-// Page load হলেই stored data দেখাবে।
+// Page load holay stored data dakhaba?
 displayProductsForLocalStorage();
 
